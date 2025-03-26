@@ -32,7 +32,7 @@ namespace DiamanteDeX
                 {
                     if (posicaoColuna < meio - posicaoLinha || posicaoColuna > meio + posicaoLinha)
                     {
-                        Console.Write(" ");
+                        Console.Write("-");
                     }
                     else
                     {
@@ -47,9 +47,9 @@ namespace DiamanteDeX
             {
                 for (int posicaoColuna = 0; posicaoColuna < numImp; posicaoColuna++)
                 {
-                    if (posicaoColuna < posicaoLinha - meio || posicaoColuna < meio - posicaoLinha)
+                    if (posicaoColuna < posicaoLinha - meio || posicaoColuna >= numImp - (posicaoLinha - meio) )
                     {
-                        Console.Write(" ");
+                        Console.Write("-");
                     }
                     else
                     {
