@@ -1,6 +1,6 @@
 # DiamanteDeX
 
-![](https://i.imgur.com/UQCszrI.gif)
+![](https://i.imgur.com/uKCZ7os.gif)
 
 ## Projeto
 Desenvolvido durante o curso FullStack Academia do Programador 2025.
