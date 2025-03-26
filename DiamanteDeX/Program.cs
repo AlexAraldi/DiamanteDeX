@@ -10,42 +10,25 @@
         static void Main(string[] args)
         {
             Console.Clear();
-            Console.WriteLine("Digite um número ímpar:   ");
+            Console.Write("Digite um número ímpar: ");
             int numImp = Convert.ToInt32(Console.ReadLine());
-
 
             while (numImp % 2 == 0)
             {
                 Console.WriteLine("O número é invalido digite novamente!!!!!");
-                Console.WriteLine("Digite um número ímpar:   ");
+                Console.Write("Digite um número ímpar:   ");
                 numImp = Convert.ToInt32(Console.ReadLine());
             }
-
             Console.WriteLine($"O seu numero impar é: {numImp} ");
-
-            int fatorial = 1;
+            //__________________________________________________________________________________________________________________
             
-            for (int i = numImp; i >= 1; i--)
+            for (int i = 0; i < numImp; i++)
             {
-                Console.Write( " ");
+                Console.WriteLine("X");
 
-                fatorial *= i;
-
-                if (i > 1)
-
-                {
-                    Console.Write("X ");
-                }
-
+                
             }
-
-
-
-
             Console.ReadLine();
-
-
-
         }
     }
 }
