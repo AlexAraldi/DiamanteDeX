@@ -21,7 +21,7 @@ namespace DiamanteDeX
                 Console.Write("Digite um número ímpar:   ");
                 tamanhoDiamante = Convert.ToInt32(Console.ReadLine());
             }
-            Console.WriteLine($"O seu numero impar é: {tamanhoDiamante} ");
+            Console.WriteLine($"O seu diamante tem o tamanho de: {tamanhoDiamante} linhas.");
 
             //____________________________________________parte superior da linha central______________________________________________________________________
 
