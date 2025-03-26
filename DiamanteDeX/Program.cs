@@ -26,7 +26,19 @@
             {
                 Console.WriteLine("X");
 
-                
+
+                for (int j = 0; j < numImp; j++)
+                {
+                    if (j == numImp / 2 - i || j == numImp / 2 + i || j == i - numImp / 2 || j == 3 * (numImp / 2) - i)
+                    {
+                        Console.Write("X");
+                    }
+                    else
+                    {
+                        Console.Write(" ");
+                    }
+                }
+
             }
             Console.ReadLine();
         }
