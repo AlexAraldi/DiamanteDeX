@@ -1,4 +1,6 @@
-﻿namespace DiamanteDeX
+﻿using System.Runtime.CompilerServices;
+
+namespace DiamanteDeX
 {
     internal class Program
     {
@@ -20,25 +22,41 @@
                 numImp = Convert.ToInt32(Console.ReadLine());
             }
             Console.WriteLine($"O seu numero impar é: {numImp} ");
+
             //__________________________________________________________________________________________________________________
-            
-            for (int i = 0; i < numImp; i++)
+
+            int meio = numImp / 2;
+            for (int posicaoLinha = 0; posicaoLinha <= meio; posicaoLinha++)
             {
-                Console.WriteLine("X");
-
-
-                for (int j = 0; j < numImp; j++)
+                for (int posicaoColuna = 0; posicaoColuna < numImp; posicaoColuna++)
                 {
-                    if (j == numImp / 2 - i || j == numImp / 2 + i || j == i - numImp / 2 || j == 3 * (numImp / 2) - i)
-                    {
-                        Console.Write("X");
-                    }
-                    else
+                    if (posicaoColuna < meio - posicaoLinha || posicaoColuna > meio + posicaoLinha)
                     {
                         Console.Write(" ");
                     }
+                    else
+                    {
+                        Console.Write("X");
+                    }
                 }
 
+                Console.WriteLine();
+            }
+            
+            for (int posicaoLinha = meio + 1; posicaoLinha < numImp; posicaoLinha++)
+            {
+                for (int posicaoColuna = 0; posicaoColuna < numImp; posicaoColuna++)
+                {
+                    if (posicaoColuna < posicaoLinha - meio || posicaoColuna < meio - posicaoLinha)
+                    {
+                        Console.Write(" ");
+                    }
+                    else
+                    {
+                        Console.Write("X");
+                    }
+                }
+                Console.WriteLine();
             }
             Console.ReadLine();
         }
