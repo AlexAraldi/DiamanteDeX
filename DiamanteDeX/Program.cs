@@ -13,26 +13,26 @@ namespace DiamanteDeX
         {
             Console.Clear();
             Console.Write("Digite um número ímpar: ");
-            int numImp = Convert.ToInt32(Console.ReadLine());
+            int tamanhoDiamante = Convert.ToInt32(Console.ReadLine());
 
-            while (numImp % 2 == 0)
+            while (tamanhoDiamante % 2 == 0)
             {
                 Console.WriteLine("O número é invalido digite novamente!!!!!");
                 Console.Write("Digite um número ímpar:   ");
-                numImp = Convert.ToInt32(Console.ReadLine());
+                tamanhoDiamante = Convert.ToInt32(Console.ReadLine());
             }
-            Console.WriteLine($"O seu numero impar é: {numImp} ");
+            Console.WriteLine($"O seu numero impar é: {tamanhoDiamante} ");
 
-            //__________________________________________________________________________________________________________________
+            //____________________________________________parte superior da linha central______________________________________________________________________
 
-            int meio = numImp / 2;
-            for (int posicaoLinha = 0; posicaoLinha <= meio; posicaoLinha++)
+            int meioDoDiamante = tamanhoDiamante / 2;
+            for (int posicaoLinha = 0; posicaoLinha <= meioDoDiamante; posicaoLinha++) // percorre as linhas
             {
-                for (int posicaoColuna = 0; posicaoColuna < numImp; posicaoColuna++)
+                for (int posicaoColuna = 0; posicaoColuna < tamanhoDiamante; posicaoColuna++) //percorre as colunas parte esquerda
                 {
-                    if (posicaoColuna < meio - posicaoLinha || posicaoColuna > meio + posicaoLinha)
+                    if (posicaoColuna < meioDoDiamante - posicaoLinha || posicaoColuna > meioDoDiamante + posicaoLinha) // imprime (" ") se verdadeiro de acordo com a condicao e (x) se falso
                     {
-                        Console.Write("-");
+                        Console.Write(" ");
                     }
                     else
                     {
@@ -42,14 +42,15 @@ namespace DiamanteDeX
 
                 Console.WriteLine();
             }
-            
-            for (int posicaoLinha = meio + 1; posicaoLinha < numImp; posicaoLinha++)
+            //_____________________________________________parte inferior da linha central_____________________________________________________________________
+
+            for (int posicaoLinha = meioDoDiamante + 1; posicaoLinha < tamanhoDiamante; posicaoLinha++) // percorre as linhas
             {
-                for (int posicaoColuna = 0; posicaoColuna < numImp; posicaoColuna++)
+                for (int posicaoColuna = 0; posicaoColuna < tamanhoDiamante; posicaoColuna++) //percorre as colunas parte direita 
                 {
-                    if (posicaoColuna < posicaoLinha - meio || posicaoColuna >= numImp - (posicaoLinha - meio) )
+                    if (posicaoColuna < posicaoLinha - meioDoDiamante || posicaoColuna >= tamanhoDiamante - (posicaoLinha - meioDoDiamante)) // imprime (" ") se verdadeiro de acordo com a condicao e (x) 
                     {
-                        Console.Write("-");
+                        Console.Write(" ");
                     }
                     else
                     {
